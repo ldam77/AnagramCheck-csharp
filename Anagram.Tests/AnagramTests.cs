@@ -21,19 +21,19 @@ namespace Anagram.Tests
       Assert.AreEqual(word, result);
     }
     [TestMethod]
-    public void GetWordString_ReturnsWordString_WordString()
+    public void FindAnagram_ReturnsWordString_WordString()
     {
       //Arrange
       string word = "bread";
       string myString = "beard reads";
+      string expected = "beard";
       AnagramChecker newWord = new AnagramChecker(word);
-      newWord.SetWordString(myString);
 
       //Act
-      string result = newWord.GetWordString();
+      string result = newWord.FindAnagram(myString);
 
       //Assert
-      Assert.AreEqual(myString, result);
+      Assert.AreEqual(expected, result);
     }
   }
 }
